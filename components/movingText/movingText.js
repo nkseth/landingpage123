@@ -3,8 +3,19 @@ import Phone from "../phone/phone";
 import Timeline from "../timeline/timeline";
 import { FiChevronRight, fiChevronLeft, FiChevronLeft } from "react-icons/fi";
 import { styles } from "./movingTextStyle";
+import { useEffect, useState } from "react";
 
-const movingTest = () => {
+const MovingTest = () => {
+  const [width,setwidth]=useState(0)
+  useEffect(()=>{
+      if(window)
+      {
+        setwidth(window.innerWidth+100)
+      console.log(window.innerWidth+100)
+      }
+
+
+  },[])
   const textData = [
     "Content Moderation",
     "Content Moderation",
@@ -19,9 +30,9 @@ const movingTest = () => {
             <div key={index} className="text1-container">
               <motion.h1
                 animate={
-                  index % 2 !== 0 ? { x: [1700, -1500] } : { x: [-1500, 1700] }
+                  index % 2 !== 0 ? { x: [width,width*-1] } : { x: [width*-1, width] }
                 }
-                initial={index % 2 !== 0 ? { x: 1700 } : { x: -1500 }}
+                initial={index % 2 !== 0 ? { x: width } : { x:width*-1 }}
                 transition={{ duration: 5 }}
                 style={{fontSize:'150px',display: 'flex',justifyContent: 'flex-start',alignItems: 'center',color:'black'}}
               >
@@ -33,7 +44,7 @@ const movingTest = () => {
                 <motion.hr
                   animate="hidden"
                   variants={list}
-                  transition={{ duration: 7 }}
+                  transition={{ duration: 5 }}
                   style={{width: '100vw',borderTop: '2px solid black'}}
                 />
               )}
@@ -41,6 +52,7 @@ const movingTest = () => {
           );
         })}
       </div>
+     
       <div className="phone-container" style={styles.phone}>
         <Phone />
       </div>
@@ -48,8 +60,9 @@ const movingTest = () => {
         {" "}
         <Timeline />
       </div>
+    
     </div>
   );
 };
 
-export default movingTest;
+export default MovingTest;

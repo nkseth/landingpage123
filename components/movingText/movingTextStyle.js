@@ -7,6 +7,6 @@ export const styles = {
     alignItems: "center",
     height: "90vh",
   },
-  phone: { position: "absolute" },
-  Timeline: { position: "absolute", right: "5rem" },
+  phone: { position: "absolute",top:"50%",left:"50%",transform: "translate(-50%,-50%)"},
+  Timeline: { position: "absolute",top:"50%",left:"50%",transform: "translate(300px,-50%)"},
 };

@@ -9,11 +9,14 @@ const supPlatforms = ({ platformData, changeChecked }) => {
   return (
     <div className="supported-platforms" style={styles.supportedPlatforms}>
       <h1 style={styles.h1}>Supported Platforms</h1>
-
-      <motion.div
-        className="supPlatforms-container"
-        style={styles.supPlatforms}
-      >
+      <motion.li
+         
+          animate={{ x: "-100%" }}
+          transition={{ duration: 10, loop: Infinity }}
+          className="supPlatforms-container"
+          style={styles.supPlatforms}
+        >
+      
         {platformData.map((item, index) => {
           if (item?.row === 1) {
             return (
@@ -73,7 +76,7 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             );
           }
         })}
-      </motion.div>
+      </motion.li>
       <motion.div
         className="supPlatforms-container"
         style={styles.supPlatforms}

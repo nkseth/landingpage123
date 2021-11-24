@@ -1,5 +1,5 @@
 export const styles = {
-  h1: { display: "flex", alignItems: "end", fontSize: "80px" },
+  h1: { display: "flex", alignItems: "end", fontSize: "70px" },
   text: {
     position: "relative",
     display: "flex",

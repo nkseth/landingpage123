@@ -30,15 +30,17 @@ const MovingTest = () => {
             <div key={index} className="text1-container">
               <motion.h1
                 animate={
-                  index % 2 !== 0 ? { x: [width,width*-1] } : { x: [width*-1, width] }
+                  index % 2 == 0 ? { x: ['-100vw','100vw'] } : { x: ['100vw','-100vw' ] }
                 }
-                initial={index % 2 !== 0 ? { x: width } : { x:width*-1 }}
+                initial={index % 2 != 0 ? { x: width } : { x:width*-1}}
                 transition={{ duration: 5 }}
                 style={{fontSize:'150px',display: 'flex',justifyContent: 'flex-start',alignItems: 'center',color:'black'}}
               >
-               {index % 2 != 0 ?<FiChevronLeft /> :null} 
+               
+               {index === 1 ?<FiChevronLeft /> :null} 
+              
                 {item}
-                {index % 2 == 0 ?<FiChevronRight /> :null} 
+                {index!== 1 ?<FiChevronRight /> :null} 
               </motion.h1>
               {index * 2 == 4 ? null : (
                 <motion.hr

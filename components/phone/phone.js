@@ -20,7 +20,7 @@ const Phone = () => {
         <div className="phone-holder" style={styles.holder}>
           <ReactPlayer
             height="510px"
-            url= "http://u.filein.io/7z6QmIkkH2.mp4"
+            url= './video.mp4'
             playing={state}
             preload="auto"
            muted

@@ -30,7 +30,11 @@ const MovingTest = () => {
             <div key={index} className="text1-container">
               <motion.h1
                 animate={
-                  index % 2 == 0 ? { x: ['-70vw','100vw'] } : { x: ['100vw','-100vw' ] }
+                  index % 2 == 0 ? { x: ['-70vw','100vw'] } : { x: ['100vw','-100vw' ]}
+                  
+                }
+                exit={{
+                  opacity:0}
                 }
                
                 transition={{ duration: 5 }}

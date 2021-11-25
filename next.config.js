@@ -5,5 +5,7 @@ module.exports = {
   },
 };
 const withVideos = require("next-videos");
-
+const withImages = require('next-images')
 module.exports = withVideos();
+
+module.exports = withImages()

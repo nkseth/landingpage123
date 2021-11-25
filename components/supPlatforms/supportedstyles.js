@@ -1,5 +1,5 @@
 export const styles = {
-  supportedPlatforms: { margin: "35px 0" },
+  supportedPlatforms: { margin: "5vh" },
   h1: {
     textAlign: "center",
     color: "#70A0FA",
@@ -23,8 +23,7 @@ export const styles = {
   },
   supPlatforms: {
     display: "flex",
-    justifyContent: "space-around",
-    flex: "wrap",
+    justifyContent: "flex-start",
     alignItems: "center",
     marginBottom: "40px",
   },

@@ -5,8 +5,8 @@ import Link from "next/link";
 const navbar = () => {
   return (
     <div className="navbar" style={styles.div}>
-      <img
-        src="http://u.filein.io/mhxnTJ7sQ9.svg"
+      <Image
+        src={require("./logo.svg")}
         alt="logo"
         width="160"
         height="40"

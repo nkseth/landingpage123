@@ -30,9 +30,9 @@ const MovingTest = () => {
             <div key={index} className="text1-container">
               <motion.h1
                 animate={
-                  index % 2 == 0 ? { x: ['-100vw','100vw'] } : { x: ['100vw','-100vw' ] }
+                  index % 2 == 0 ? { x: ['-70vw','100vw'] } : { x: ['100vw','-100vw' ] }
                 }
-                initial={index % 2 != 0 ? { x: width } : { x:width*-1}}
+               
                 transition={{ duration: 5 }}
                 style={{fontSize:'150px',display: 'flex',justifyContent: 'flex-start',alignItems: 'center',color:'black'}}
               >

@@ -37,67 +37,88 @@ const timelineObject = () => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "start",
-        justifyContent: "center",
+        position: "relative",
+        padding: "2rem",
       }}
     >
-      {objectData.map((item, index) => {
-        return (
-          <div
-            className="timeline-object"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              margin: "1rem 0",
-            }}
-            key={index}
-          >
-            <div
-              className="timeline-circle"
-              style={{
-                width: "2rem",
-                height: "2rem",
-                backgroundColor: `${item.color}`,
-                boxShadow: `${item.shadow}`,
-                borderRadius: "50%",
-                marginRight: "1rem",
-              }}
-            ></div>
-            <div
-              className="timeline-content"
-              style={{
-                backgroundColor: `${item.color}`,
-                color: "white",
-                padding: "1rem",
-                borderRadius: "40px",
-                marginLeft: "1rem",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+      <div
+        style={{
+          width: "4px",
+          height: "400px",
+          backgroundColor: "#E0E0E0",
+          position: "absolute",
+          left: "9px",
+          top: "70px",
+        }}
+      ></div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+          justifyContent: "center",
+        }}
+      >
+        {objectData.map((item, index) => {
+          return (
+            <>
               <div
+                className="timeline-object"
                 style={{
-                  height: "1.5rem",
-                  width: "1.5rem",
-                  borderRadius: "50%",
-                  backgroundColor: "#ffffff",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  marginRight: "1rem",
+                  margin: "1.5rem 0",
                 }}
+                key={index}
               >
-                <item.icon style={{ color: `${item.color}` }} />
+                <div
+                  className="timeline-circle"
+                  style={{
+                    width: "1.4rem",
+                    height: "1.4rem",
+                    backgroundColor: `${item.color}`,
+                    boxShadow: `${item.shadow}`,
+                    borderRadius: "50%",
+                    marginRight: "1rem",
+                    position: "absolute",
+                    left: 0,
+                  }}
+                ></div>
+                <div
+                  className="timeline-content"
+                  style={{
+                    backgroundColor: `${item.color}`,
+                    color: "white",
+                    padding: "0.7rem 1rem",
+                    borderRadius: "40px",
+                    marginLeft: "1rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      height: "1.5rem",
+                      width: "1.5rem",
+                      borderRadius: "50%",
+                      backgroundColor: "#ffffff",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginRight: "1rem",
+                    }}
+                  >
+                    <item.icon style={{ color: `${item.color}` }} />
+                  </div>
+                  {item.desc}
+                </div>
               </div>
-              {item.desc}
-            </div>
-          </div>
-        );
-      })}
+            </>
+          );
+        })}
+      </div>
     </div>
   );
 };

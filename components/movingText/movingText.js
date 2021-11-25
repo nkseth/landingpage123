@@ -6,16 +6,13 @@ import { styles } from "./movingTextStyle";
 import { useEffect, useState } from "react";
 
 const MovingTest = () => {
-  const [width,setwidth]=useState(0)
-  useEffect(()=>{
-      if(window)
-      {
-        setwidth(window.innerWidth+100)
-      console.log(window.innerWidth+100)
-      }
-
-
-  },[])
+  const [width, setwidth] = useState(0);
+  useEffect(() => {
+    if (window) {
+      setwidth(window.innerWidth + 100);
+      console.log(window.innerWidth + 100);
+    }
+  }, []);
   const textData = [
     "Content Moderation",
     "Content Moderation",
@@ -27,38 +24,45 @@ const MovingTest = () => {
       <div className="texts-container">
         {textData.map((item, index) => {
           return (
-            <div key={index} className="text1-container">
+            <motion.div
+              key={index}
+              className="text1-container"
+              animate={{ opacity: 0 }}
+              transition={{ delay: 5 }}
+            >
               <motion.h1
                 animate={
-                  index % 2 == 0 ? { x: ['-70vw','100vw'] } : { x: ['100vw','-100vw' ]}
-                  
+                  index % 2 == 0
+                    ? { x: ["-70vw", "100vw"] }
+                    : { x: ["100vw", "-100vw"] }
                 }
-                exit={{
-                  opacity:0}
-                }
-               
                 transition={{ duration: 5 }}
-                style={{fontSize:'150px',display: 'flex',justifyContent: 'flex-start',alignItems: 'center',color:'black'}}
+                style={{
+                  fontSize: "150px",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  color: "black",
+                }}
               >
-               
-               {index === 1 ?<FiChevronLeft /> :null} 
-              
+                {index === 1 ? <FiChevronLeft /> : null}
+
                 {item}
-                {index!== 1 ?<FiChevronRight /> :null} 
+                {index !== 1 ? <FiChevronRight /> : null}
               </motion.h1>
               {index * 2 == 4 ? null : (
                 <motion.hr
                   animate="hidden"
                   variants={list}
                   transition={{ duration: 5 }}
-                  style={{width: '100vw',borderTop: '2px solid black'}}
+                  style={{ width: "100vw", borderTop: "2px solid black" }}
                 />
               )}
-            </div>
+            </motion.div>
           );
         })}
       </div>
-     
+
       <div className="phone-container" style={styles.phone}>
         <Phone />
       </div>
@@ -66,7 +70,6 @@ const MovingTest = () => {
         {" "}
         <Timeline />
       </div>
-    
     </div>
   );
 };

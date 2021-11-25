@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTelegramPlane, FaTwitch, FaDiscord } from "react-icons/fa";
 import Navbar from "../components/navbar/navbar";
 import Animatedtext from "../components/movingText/movingText";

@@ -15,7 +15,7 @@ const supPlatforms = ({ platformData, changeChecked }) => {
       <motion.li
         animate={{ x: ["0%","100%"] }}
         in
-        transition={{ duration: 10, loop: Infinity,ease:linear }}
+        transition={{ duration: 10, loop: Infinity }}
         className="supPlatforms-container"
         style={styles.supPlatforms}
       >

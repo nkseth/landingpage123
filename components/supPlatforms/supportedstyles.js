@@ -26,7 +26,7 @@ export const styles = {
     justifyContent: "space-around",
     flex: "wrap",
     alignItems: "center",
-    marginBottom: "5rem",
+    marginBottom: "40px",
   },
   switch: {
     width: "100%",

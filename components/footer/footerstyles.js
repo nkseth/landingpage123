@@ -2,8 +2,6 @@ export const styles = {
   footer: {
     backgroundColor: "#374051",
     color: "#FFFFFF",
-    paddingTop: "20px",
-    minHeight: "40vh",
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
@@ -13,7 +11,7 @@ export const styles = {
     alignItems: "top",
     justifyContent: "start",
     flex: "wrap",
-    padding: "0 80px",
+    padding: "40px 80px",
   },
   option: { marginRight: "100px" },
   bottom: {
@@ -23,7 +21,7 @@ export const styles = {
     flex: "wrap",
     color: "#FFFFFF",
     borderTop: "1px solid white",
-    padding: "0 80px",
+    padding: "15px 80px",
   },
   icon: {
     color: "#FFFFFF",

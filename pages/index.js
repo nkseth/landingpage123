@@ -133,17 +133,17 @@ const Index = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#f1f8fc" }}>
-      <Navbar />
-      <Animatedtext />
-<ChakraProvider>
-      <SupPlatforms
-        platformData={platformData}
-        changeChecked={handleChangeChecked}
-      />
-</ChakraProvider>
-      <Footer />
-    </div>
+    <ChakraProvider>
+      <div style={{ backgroundColor: "#f1f8fc" }}>
+        <Navbar />
+        <Animatedtext />
+        <SupPlatforms
+          platformData={platformData}
+          changeChecked={handleChangeChecked}
+        />
+        <Footer />
+      </div>
+    </ChakraProvider>
   );
 };
 

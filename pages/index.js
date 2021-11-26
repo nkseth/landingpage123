@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTelegramPlane, FaTwitch, FaDiscord } from "react-icons/fa";
 import Navbar from "../components/navbar/navbar";
 import Animatedtext from "../components/movingText/movingText";
@@ -47,8 +47,20 @@ const Index = () => {
     },
     {
       icon: FaTelegramPlane,
+      name: "Minicraft",
+      color: "#43816a",
+      row: 1,
+    },
+    {
+      icon: FaTelegramPlane,
       name: "Telegram",
       color: "#2f89ce",
+      row: 2,
+    },
+    {
+      icon: FaTwitch,
+      name: "Twitch",
+      color: "#9147ff",
       row: 2,
     },
     {
@@ -91,6 +103,12 @@ const Index = () => {
       icon: FaTwitch,
       name: "Twitch",
       color: "#9147ff",
+      row: 3,
+    },
+    {
+      icon: FaDiscord,
+      name: "Discord",
+      color: "#8a9cff",
       row: 3,
     },
     {

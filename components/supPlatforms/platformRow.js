@@ -56,6 +56,7 @@ function platformRow({ isChecked, changeChecked, platformName, item }) {
           isChecked={isChecked || false}
           onChange={changeChecked.bind(null, item, isChecked || false)}
           defaultChecked={true}
+          colorScheme="green"
           style={{
             position: "relative",
             top: "-10px",

@@ -11,10 +11,9 @@ function platformRow({ isChecked, changeChecked, platformName, item }) {
           backgroundColor: "#FFFFFF",
           border: "4px solid #F4F5F6",
           display: "flex",
-          flexDirection: "row",
-          padding: "20px",
+          padding: "20px 10px",
           borderRadius: "15px",
-          width: "15vw",
+          width: "14vw",
           marginLeft: "35px",
         }}
       >

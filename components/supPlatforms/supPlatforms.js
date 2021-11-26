@@ -17,11 +17,15 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             options={{
               wrapAround: true,
               freeScroll: true,
-              autoPlay: 3000,
-              selectedAttraction: 0.001,
+              autoPlay: 1000,
+              selectedAttraction: 0.0001,
               friction: 1.8,
               initialIndex: 3,
               draggable: false,
+              onMouseOver: false,
+              prevNextButtons: false,
+              pageDots: false,
+              pauseAutoPlayOnHover: false,
             }}
           >
             {platformData.map((item, index) => {
@@ -45,12 +49,15 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             options={{
               wrapAround: true,
               freeScroll: true,
-              autoPlay: 3000,
-              selectedAttraction: 0.001,
+              autoPlay: 1000,
+              selectedAttraction: 0.0001,
               friction: 1.8,
               initialIndex: 3,
               rightToLeft: true,
               draggable: false,
+              prevNextButtons: false,
+              pageDots: false,
+              pauseAutoPlayOnHover: false,
             }}
           >
             {platformData.map((item, index) => {
@@ -73,11 +80,14 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             options={{
               wrapAround: true,
               freeScroll: true,
-              autoPlay: 3000,
-              selectedAttraction: 0.001,
+              autoPlay: 1000,
+              selectedAttraction: 0.0001,
               friction: 1.8,
               initialIndex: 3,
               draggable: false,
+              prevNextButtons: false,
+              pageDots: false,
+              pauseAutoPlayOnHover: false,
             }}
           >
             {platformData.map((item, index) => {

@@ -17,7 +17,7 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             options={{
               wrapAround: true,
               freeScroll: true,
-              autoPlay: 1500,
+              autoPlay: 3000,
               selectedAttraction: 0.001,
               friction: 1.8,
               initialIndex: 3,
@@ -45,7 +45,7 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             options={{
               wrapAround: true,
               freeScroll: true,
-              autoPlay: 1500,
+              autoPlay: 3000,
               selectedAttraction: 0.001,
               friction: 1.8,
               initialIndex: 3,
@@ -73,7 +73,7 @@ const supPlatforms = ({ platformData, changeChecked }) => {
             options={{
               wrapAround: true,
               freeScroll: true,
-              autoPlay: 1500,
+              autoPlay: 3000,
               selectedAttraction: 0.001,
               friction: 1.8,
               initialIndex: 3,

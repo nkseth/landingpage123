@@ -5,8 +5,19 @@ export const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "90vh",
+    padding: "1rem",
+    marginBottom: "1rem",
   },
-  phone: { position: "absolute",top:"50%",left:"50%",transform: "translate(-50%,-50%)"},
-  Timeline: { position: "absolute",top:"50%",left:"50%",transform: "translate(300px,-50%)"},
+  phone: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%,-50%)",
+  },
+  Timeline: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(300px,-50%)",
+  },
 };

@@ -5,12 +5,7 @@ import Link from "next/link";
 const navbar = () => {
   return (
     <div className="navbar" style={styles.div}>
-      <Image
-        src={require("./logo.svg")}
-        alt="logo"
-        width="160"
-        height="40"
-      />
+      <Image src={require("./logo.svg")} alt="logo" width="160" height="40" />
       <Link href="https://google.com" passHref>
         <div
           style={{

@@ -60,7 +60,7 @@ function platformRow({ isChecked, changeChecked, platformName, item }) {
           style={{
             position: "relative",
             top: "-10px",
-            right: "-50px",
+            right: "-10px",
           }}
         />
       </div>

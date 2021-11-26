@@ -14,7 +14,8 @@ function platformRow({ isChecked, changeChecked, platformName, item }) {
           flexDirection: "row",
           padding: "20px",
           borderRadius: "15px",
-          width: "220px",
+          width: "15vw",
+          marginLeft: "35px",
         }}
       >
         <div
@@ -46,7 +47,7 @@ function platformRow({ isChecked, changeChecked, platformName, item }) {
               className="iconTitle"
               style={{ fontWeight: "bold", fontSize: "18px" }}
             >
-              {platformName}
+              Discord
             </div>
           </div>
         </div>
@@ -58,7 +59,7 @@ function platformRow({ isChecked, changeChecked, platformName, item }) {
           style={{
             position: "relative",
             top: "-10px",
-            right: "-10px",
+            right: "-50px",
           }}
         />
       </div>

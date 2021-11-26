@@ -1,91 +1,101 @@
 import React, { useState } from "react";
-import { styles } from "./supportedstyles";
-import { motion } from "framer-motion";
-import { Switch, ChakraProvider } from "@chakra-ui/react";
-import Image from "next/image";
+
+import Flickity from "react-flickity-component";
+import Styles from "../../styles/platform.module.css";
+
 import PlatformRow from "./platformRow";
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const supPlatforms = ({ platformData, changeChecked }) => {
   return (
-    <div className="supported-platforms" style={styles.supportedPlatforms}>
-      <h1 style={styles.h1}>Supported Platforms</h1>
-      <div style={{ display: "flex" }}>
-        {/* <motion.li
-          animate={{ x: ["-100%", "120%"] }}
-          initial={{ x: -100 }}
-          transition={{ duration: 10, loop: Infinity }}
-          className="supPlatforms-container"
-          style={styles.supPlatforms}
-        > */}
-        {platformData.map((item, index) => {
-          if (item?.row === 1) {
-            return (
-              // <motion.div
-              //   className="container"
-              //   key={index}
-              //   style={{
-              //     backgroundColor: "#FFFFFF",
-              //     border: "4px solid #F4F5F6",
-              //     display: "flex",
-              //     flexDirection: "row",
-              //     padding: "20px",
-              //     borderRadius: "15px",
-              //     width: "220px",
+    <div className="supported-platforms">
+      <h1 className={Styles.heading}>Supported Platforms</h1>
 
-              //     marginLeft: "10px",
-              //   }}
-              // >
+      <div>
+        <div className={Styles.supPlatforms}>
+          <Flickity
+            options={{
+              wrapAround: true,
+              freeScroll: true,
+              autoPlay: 1500,
+              selectedAttraction: 0.001,
+              friction: 1.8,
+              initialIndex: 3,
+              draggable: false,
+            }}
+          >
+            {platformData.map((item, index) => {
+              if (item?.row === 1) {
+                return (
+                  <PlatformRow
+                    key={index}
+                    isChecked={item?.isChecked}
+                    platformName={item?.name}
+                    changeChecked={changeChecked}
+                    item={item}
+                  />
+                );
+              }
+            })}
+          </Flickity>
+        </div>
 
-              // </motion.div>
-              <PlatformRow
-                key={index}
-                isChecked={item?.isChecked}
-                platformName={item?.name}
-                changeChecked={changeChecked}
-                item={item}
-              />
-            );
-          }
-        })}
-        {/* </motion.li> */}
+        <div className={Styles.supPlatforms}>
+          <Flickity
+            options={{
+              wrapAround: true,
+              freeScroll: true,
+              autoPlay: 1500,
+              selectedAttraction: 0.001,
+              friction: 1.8,
+              initialIndex: 3,
+              rightToLeft: true,
+              draggable: false,
+            }}
+          >
+            {platformData.map((item, index) => {
+              if (item?.row === 2) {
+                return (
+                  <PlatformRow
+                    key={index}
+                    isChecked={item?.isChecked}
+                    platformName={item?.name}
+                    changeChecked={changeChecked}
+                    item={item}
+                  />
+                );
+              }
+            })}
+          </Flickity>
+        </div>
+        <div className={Styles.supPlatforms}>
+          <Flickity
+            options={{
+              wrapAround: true,
+              freeScroll: true,
+              autoPlay: 1500,
+              selectedAttraction: 0.001,
+              friction: 1.8,
+              initialIndex: 3,
+              draggable: false,
+            }}
+          >
+            {platformData.map((item, index) => {
+              if (item?.row === 3) {
+                return (
+                  <PlatformRow
+                    key={index}
+                    isChecked={item?.isChecked}
+                    platformName={item?.name}
+                    changeChecked={changeChecked}
+                    item={item}
+                  />
+                );
+              }
+            })}
+          </Flickity>
+        </div>
       </div>
-      <motion.div
-        className="supPlatforms-container"
-        style={styles.supPlatforms}
-      >
-        {platformData.map((item, index) => {
-          if (item?.row === 2) {
-            return (
-              <PlatformRow
-                key={index}
-                isChecked={item?.isChecked}
-                platformName={item?.name}
-                changeChecked={changeChecked}
-                item={item}
-              />
-            );
-          }
-        })}
-      </motion.div>
-      <motion.div
-        className="supPlatforms-container"
-        style={styles.supPlatforms}
-      >
-        {platformData.map((item, index) => {
-          if (item?.row === 3) {
-            return (
-              <PlatformRow
-                key={index}
-                isChecked={item?.isChecked}
-                platformName={item?.name}
-                changeChecked={changeChecked}
-                item={item}
-              />
-            );
-          }
-        })}
-      </motion.div>
     </div>
   );
 };

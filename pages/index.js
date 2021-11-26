@@ -47,8 +47,20 @@ const Index = () => {
     },
     {
       icon: FaTelegramPlane,
+      name: "Minicraft",
+      color: "#43816a",
+      row: 1,
+    },
+    {
+      icon: FaTelegramPlane,
       name: "Telegram",
       color: "#2f89ce",
+      row: 2,
+    },
+    {
+      icon: FaTwitch,
+      name: "Twitch",
+      color: "#9147ff",
       row: 2,
     },
     {
@@ -91,6 +103,12 @@ const Index = () => {
       icon: FaTwitch,
       name: "Twitch",
       color: "#9147ff",
+      row: 3,
+    },
+    {
+      icon: FaDiscord,
+      name: "Discord",
+      color: "#8a9cff",
       row: 3,
     },
     {
